@@ -1,21 +1,11 @@
 import { TestBed, inject, async, fakeAsync, tick } from '@angular/core/testing';
-import { JsfModule, SampleService } from "./";
+import { JsfModule, HttpMock } from "./";
 
 describe('SampleTest', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [
-                {
-                    provide: SampleService,
-                    deps: [],
-                    useFactory: () => {
-                        return new SampleService()
-                    }
-                }
-            ],
-            imports: [
-                JsfModule
-            ]
+            providers: [ HttpMock ],
+            imports: [ JsfModule ]
         })
     })
 
@@ -34,7 +24,7 @@ describe('SampleTest', () => {
         expect(true).toBeTruthy()
     }))
 
-    it('should inject', inject([SampleService], (service: SampleService) => {
+    it('should inject', inject([HttpMock], (service: HttpMock) => {
         expect(service).toBeTruthy()
     }))
 })

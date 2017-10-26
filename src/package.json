@@ -10,7 +10,11 @@
     "email": "doriansomers@gmail.com"
   },
   "keywords": [
-    "angular"
+    "angular",
+    "jsf",
+    "json-schema-faker",
+    "mock",
+    "test"
   ],
   "license": "MIT",
   "bugs": {
@@ -22,7 +26,9 @@
   "typings": "ngx-jsf.d.ts",
   "peerDependencies": {
     "@angular/core": "^4.0.0",
+    "@angular/http": "^4.0.0",
     "rxjs": "^5.1.0",
-    "zone.js": "^0.8.4"
+    "zone.js": "^0.8.4",
+    "json-schema-faker": "^0.4.6",
   }
 }

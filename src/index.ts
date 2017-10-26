@@ -1,35 +1,14 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { SampleComponent } from './sample.component';
-import { SampleDirective } from './sample.directive';
-import { SamplePipe } from './sample.pipe';
-import { SampleService } from './sample.service';
+import { HttpMock } from './http-mock.service';
 
-export * from './sample.component';
-export * from './sample.directive';
-export * from './sample.pipe';
-export * from './sample.service';
+export * from './http-mock.service';
 
-@NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: [
-    SampleComponent,
-    SampleDirective,
-    SamplePipe
-  ],
-  exports: [
-    SampleComponent,
-    SampleDirective,
-    SamplePipe
-  ]
-})
+@NgModule({})
 export class JsfModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: JsfModule,
-      providers: [SampleService]
+      providers: [HttpMock]
     };
   }
 }
